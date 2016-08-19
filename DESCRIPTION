@@ -1,0 +1,10 @@
+Package: pokemongor
+Type: Package
+Title: Useful Tools for Pokemon Researchers
+Version: 0.1.0
+Author: Chih-Cheng Liang
+Maintainer: Chih-Cheng Liang <chihchengliang@gmail.com>
+Description: Pokedex dataset, including columns like Id,
+  names, evolution relationships, weights, heights, and alot more.
+License: CC0
+LazyData: TRUE
