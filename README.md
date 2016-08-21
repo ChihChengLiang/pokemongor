@@ -5,6 +5,10 @@ Pokemongor
 
 Useful Datasets for Pokemon Researchers.
 
+`pokemon_names`: useful when joining Pokedex index to pokemon name.
+`pokemons`: Base Attack, Base Defense, average weights, etc.
+`evolutions75`: Sample of 75 pokemons and their evolutions.
+
 Usage
 -----
 
