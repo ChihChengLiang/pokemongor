@@ -9,6 +9,14 @@ Useful Datasets for Pokemon Researchers.
 -   `pokemons`: Base Attack, Base Defense, average weights, etc.
 -   `evolutions75`: Sample of 75 pokemons and their evolutions.
 
+Installation
+------------
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ChihChengLiang/pokemongor")
+```
+
 Usage
 -----
 
