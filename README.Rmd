@@ -1,0 +1,29 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+
+# Pokemongor
+
+Useful Datasets for Pokemon Researchers.
+
+## Usage
+
+```{r}
+library(pokemongor)
+show <- function(dataset) knitr::kable(head(dataset))
+show(pokemon_names)
+show(pokemons)
+show(evolutions75)
+```
+
