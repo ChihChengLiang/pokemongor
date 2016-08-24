@@ -1,0 +1,39 @@
+---
+title: "Pokemongor"
+author: "Chih-Cheng Liang"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Pokemon Subjects
+
+Find interesting relationships between subjects!
+
+```{r ,message=FALSE}
+library(pokemongor)
+library(ggplot2)
+library(dplyr)
+
+pokemon_subjects %>%
+  filter(pokemon_id %in% c(16, 19, 13)) %>%
+  left_join(pokemon_names, by=c("pokemon_id"="index")) %>%
+  ggplot(aes(
+    x=weight_kg,
+    y=height_m,
+    color=factor(name))) +
+  geom_point()
+```
+
+# Forts
+
+Explore forts in Tainan
+
+```{r , message=FALSE}
+library(ggmap)
+forts %>% ggmap::qmplot(x = longitude, y = latitude, data = .)
+```
+

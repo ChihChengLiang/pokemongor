@@ -9,3 +9,6 @@ Description: Pokedex dataset, including columns like Id,
 License: CC0
 LazyData: TRUE
 RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
