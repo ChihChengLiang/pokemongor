@@ -8,11 +8,13 @@ Useful Datasets for Pokemon Researchers.
 | Item                   | Title                                       |
 |:-----------------------|:--------------------------------------------|
 | evolutions75           | OpenIntro 75 pokemons and their evolutions. |
+| forts                  | Forts Location                              |
 | items                  | Items in Pokemon Go                         |
 | level\_to\_cpm         | Level To Combat Point Multiplier(cpm)       |
 | moves                  | Pokemon Go Moves                            |
 | pokemon\_names         | Pokedex Names.                              |
 | pokemon\_names\_zh\_tw | Pokemon Names in Taiwan                     |
+| pokemon\_subjects      | Pokemon Subjects Collected by Trainers      |
 | pokemons               | Pokemon Go Game Data.                       |
 
 Installation
