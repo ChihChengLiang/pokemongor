@@ -5,9 +5,15 @@ Pokemongor
 
 Useful Datasets for Pokemon Researchers.
 
--   `pokemon_names`: useful when joining Pokedex index to pokemon name.
--   `pokemons`: Base Attack, Base Defense, average weights, etc.
--   `evolutions75`: Sample of 75 pokemons and their evolutions.
+| Item                   | Title                                       |
+|:-----------------------|:--------------------------------------------|
+| evolutions75           | OpenIntro 75 pokemons and their evolutions. |
+| items                  | Items in Pokemon Go                         |
+| level\_to\_cpm         | Level To Combat Point Multiplier(cpm)       |
+| moves                  | Pokemon Go Moves                            |
+| pokemon\_names         | Pokedex Names.                              |
+| pokemon\_names\_zh\_tw | Pokemon Names in Taiwan                     |
+| pokemons               | Pokemon Go Game Data.                       |
 
 Installation
 ------------

@@ -4,12 +4,14 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, message=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "README-"
 )
+library(dplyr)
+library(knitr)
 ```
 
 
@@ -17,9 +19,10 @@ knitr::opts_chunk$set(
 
 Useful Datasets for Pokemon Researchers.
 
-- `pokemon_names`: useful when joining Pokedex index to pokemon name.
-- `pokemons`: Base Attack, Base Defense, average weights, etc.
-- `evolutions75`: Sample of 75 pokemons and their evolutions.
+```{r, echo=FALSE}
+data(package="pokemongor")$results %>% .[, c("Item", "Title")] %>% kable
+```
+
 
 ## Installation
 
