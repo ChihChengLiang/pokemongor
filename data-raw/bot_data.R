@@ -21,7 +21,8 @@ kv_json2dataframe <- function(json_list, key_name, value_name) json_list %>%
   data.frame(
     key_col=names(.),
     value_col=.,
-    row.names = NULL
+    row.names = NULL,
+    stringsAsFactors=FALSE
   ) %>%
   `colnames<-`(c(key_name, value_name))
 
