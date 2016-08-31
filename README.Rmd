@@ -40,5 +40,9 @@ show <- function(dataset) knitr::kable(head(dataset))
 show(pokemon_names)
 show(pokemons)
 show(evolutions75)
+
+pokemon_subjects %>%
+  left_join(pokemon_names, by = c("pokemon_id"="index")) %>%
+  count(name, sort=T)
 ```
 

@@ -8,7 +8,7 @@ Useful Datasets for Pokemon Researchers.
 | Item                   | Title                                       |
 |:-----------------------|:--------------------------------------------|
 | evolutions75           | OpenIntro 75 pokemons and their evolutions. |
-| forts                  | Forts Location                              |
+| forts                  | Forts Location Tainan                       |
 | items                  | Items in Pokemon Go                         |
 | level\_to\_cpm         | Level To Combat Point Multiplier(cpm)       |
 | moves                  | Pokemon Go Moves                            |
@@ -16,6 +16,7 @@ Useful Datasets for Pokemon Researchers.
 | pokemon\_names\_zh\_tw | Pokemon Names in Taiwan                     |
 | pokemon\_subjects      | Pokemon Subjects Collected by Trainers      |
 | pokemons               | Pokemon Go Game Data.                       |
+| taipei\_forts          | Forts Location Taipei                       |
 
 Installation
 ------------
@@ -68,3 +69,24 @@ show(evolutions75)
 | Pidgey4 | Pidgey  |  338|   51|    1.73|    0.31|                 3000|                 3| Tackle       | Normal             |                   12| Air Cutter     | Flying               |                     30|      640|       79|        30.00|         1.12|                      3000|                      3| Steel Wing        | Steel                   |                        15| Air Cutter          | Flying                    |                          30|       |
 | Pidgey5 | Pidgey  |  242|   45|    1.44|    0.27|                 1900|                 2| Quick Attack | Normal             |                   10| Air Cutter     | Flying               |                     30|      457|       69|         1.42|         0.98|                      1900|                      2| Wing Attack       | Flying                  |                         9| Twister             | Dragon                    |                          25|       |
 | Pidgey6 | Pidgey  |  129|   35|    2.07|    0.35|                  800|                 1| Quick Attack | Normal             |                   10| Air Cutter     | Flying               |                     30|      243|       52|        30.00|         1.27|                       800|                      1| Wing Attack       | Flying                  |                         9| Aerial Ace          | Flying                    |                          30|       |
+
+``` r
+
+pokemon_subjects %>%
+  left_join(pokemon_names, by = c("pokemon_id"="index")) %>%
+  count(name, sort=T)
+#> # A tibble: 51 x 2
+#>         name     n
+#>        <chr> <int>
+#> 1     Pidgey    73
+#> 2    Rattata    30
+#> 3       <NA>    18
+#> 4  Growlithe    11
+#> 5     Weedle    11
+#> 6      Ekans    10
+#> 7    Spearow    10
+#> 8     Meowth     8
+#> 9     Pinsir     7
+#> 10   Poliwag     7
+#> # ... with 41 more rows
+```

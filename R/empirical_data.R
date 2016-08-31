@@ -21,7 +21,7 @@
 #'   pokemon_subjects
 "pokemon_subjects"
 
-#' Forts Location
+#' Forts Location Tainan
 #'
 #' Latitudes and longitudes of forts and gyms in Tainan.
 #'
@@ -44,3 +44,27 @@
 #' @examples
 #'   forts
 "forts"
+
+#' Forts Location Taipei
+#'
+#' Latitudes and longitudes of forts and gyms in Taipei.
+#'
+#' @source This package
+#' @format Data frame with columns
+#' \describe{
+#'  \item{id}
+#'  \item{type}{1s are forts and NAs are gyms}
+#'  \item{latitude}
+#'  \item{longitude}
+#'  \item{enabled}
+#'  \item{last_modified_timestamp_ms}
+#'  \item{cooldown_complete_timestamp_ms}
+#'  \item{active_fort_modifier}
+#'  \item{owned_by_team}
+#'  \item{guard_pokemon_id}
+#'  \item{gym_points}
+#'  \item{is_in_battle}
+#' }
+#' @examples
+#'   forts
+"taipei_forts"

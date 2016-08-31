@@ -33,11 +33,13 @@ pokemon_subjects <- c("bot1", "bot2") %>%
          egg_incubator_id)
 
 
-forts <- fromJSON("data-raw/empirical/location-bot2.json", simplifyVector = F) %$%
+extract_forts <- function(file_path) file_path %>%
+  fromJSON(simplifyVector = F) %$%
   cells %>%
   list.filter("forts" %in% names(.)) %>%
   list.select(forts) %>%
   list.ungroup(2) %>%
+  lapply(list.flatten) %>%
   bind_rows() %>%
   select(id, type, latitude, longitude, enabled,
          last_modified_timestamp_ms,
@@ -51,5 +53,9 @@ forts <- fromJSON("data-raw/empirical/location-bot2.json", simplifyVector = F) %
               last_modified_timestamp_ms,
               cooldown_complete_timestamp_ms)
 
+forts <- "data-raw/empirical/location-bot2.json" %>% extract_forts
+taipei_forts <- "data-raw/empirical/location-Taipei1.json" %>% extract_forts
+
 devtools::use_data(pokemon_subjects, overwrite = T)
 devtools::use_data(forts, overwrite = T)
+devtools::use_data(taipei_forts, overwrite = T)
